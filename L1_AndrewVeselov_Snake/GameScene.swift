@@ -25,6 +25,8 @@ class GameScene: SKScene {
     // вызывается при первом запуске сцены
     // наша змея
     var snake: Snake?
+    var snakeInitialPoint: CGPoint?
+    
     override func didMove(to view: SKView) {
         // цвет фона сцены
         backgroundColor = SKColor.black
@@ -67,7 +69,9 @@ class GameScene: SKScene {
         // устанавливаем категории, с которыми будут пересекаться края сцены
         self.physicsBody?.collisionBitMask = CollisionCategories.Snake | CollisionCategories.SnakeHead
         // создаем змею по центру экрана и добавляем ее на сцену
-        snake = Snake(atPoint: CGPoint(x: view.scene!.frame.midX, y: view.scene!.frame.midY))
+        // Define initial point of the snake
+        snakeInitialPoint = CGPoint(x: view.scene!.frame.midX, y: view.scene!.frame.midY)
+        snake = Snake(atPoint: snakeInitialPoint!)
         self.addChild(snake!)
         // Делаем нашу сцену делегатом соприкосновений
         self.physicsWorld.contactDelegate = self
@@ -149,7 +153,10 @@ extension GameScene: SKPhysicsContactDelegate {
             // создаем новое яблоко
             createApple()
         case CollisionCategories.EdgeBody: // проверяем, что это стенка экрана
-        break                         // соприкосновение со стеной будет домашним заданием
+            snake?.removeFromParent()
+            snake = Snake(atPoint: snakeInitialPoint!)
+            self.addChild(snake!)
+//        break                         // соприкосновение со стеной будет домашним заданием
         default:
             break
         }
