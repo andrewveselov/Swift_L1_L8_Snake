@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		49FA7377226083F7004840CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA7376226083F7004840CF /* AppDelegate.swift */; };
-		49FA7379226083F7004840CF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49FA7378226083F7004840CF /* GameScene.sks */; };
-		49FA737B226083F7004840CF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49FA737A226083F7004840CF /* Actions.sks */; };
 		49FA737D226083F7004840CF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA737C226083F7004840CF /* GameScene.swift */; };
 		49FA737F226083F7004840CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA737E226083F7004840CF /* GameViewController.swift */; };
 		49FA7382226083F7004840CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FA7380226083F7004840CF /* Main.storyboard */; };
@@ -17,6 +15,10 @@
 		49FA7387226083F8004840CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FA7385226083F8004840CF /* LaunchScreen.storyboard */; };
 		49FA7392226083F8004840CF /* L1_AndrewVeselov_SnakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA7391226083F8004840CF /* L1_AndrewVeselov_SnakeTests.swift */; };
 		49FA739D226083F9004840CF /* L1_AndrewVeselov_SnakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA739C226083F9004840CF /* L1_AndrewVeselov_SnakeUITests.swift */; };
+		49FA73AB226089B5004840CF /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA73AA226089B5004840CF /* Apple.swift */; };
+		49FA73AD22608FA2004840CF /* SnakeBodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA73AC22608FA2004840CF /* SnakeBodyPart.swift */; };
+		49FA73AF22608FC6004840CF /* SnakeHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA73AE22608FC6004840CF /* SnakeHead.swift */; };
+		49FA73B122608FED004840CF /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FA73B022608FED004840CF /* Snake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 /* Begin PBXFileReference section */
 		49FA7373226083F7004840CF /* L1_AndrewVeselov_Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = L1_AndrewVeselov_Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FA7376226083F7004840CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49FA7378226083F7004840CF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		49FA737A226083F7004840CF /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		49FA737C226083F7004840CF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		49FA737E226083F7004840CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		49FA7381226083F7004840CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +53,10 @@
 		49FA7398226083F9004840CF /* L1_AndrewVeselov_SnakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L1_AndrewVeselov_SnakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FA739C226083F9004840CF /* L1_AndrewVeselov_SnakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1_AndrewVeselov_SnakeUITests.swift; sourceTree = "<group>"; };
 		49FA739E226083F9004840CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FA73AA226089B5004840CF /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
+		49FA73AC22608FA2004840CF /* SnakeBodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeBodyPart.swift; sourceTree = "<group>"; };
+		49FA73AE22608FC6004840CF /* SnakeHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeHead.swift; sourceTree = "<group>"; };
+		49FA73B022608FED004840CF /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +108,16 @@
 			isa = PBXGroup;
 			children = (
 				49FA7376226083F7004840CF /* AppDelegate.swift */,
-				49FA7378226083F7004840CF /* GameScene.sks */,
-				49FA737A226083F7004840CF /* Actions.sks */,
 				49FA737C226083F7004840CF /* GameScene.swift */,
 				49FA737E226083F7004840CF /* GameViewController.swift */,
 				49FA7380226083F7004840CF /* Main.storyboard */,
 				49FA7383226083F8004840CF /* Assets.xcassets */,
 				49FA7385226083F8004840CF /* LaunchScreen.storyboard */,
 				49FA7388226083F8004840CF /* Info.plist */,
+				49FA73AA226089B5004840CF /* Apple.swift */,
+				49FA73AC22608FA2004840CF /* SnakeBodyPart.swift */,
+				49FA73AE22608FC6004840CF /* SnakeHead.swift */,
+				49FA73B022608FED004840CF /* Snake.swift */,
 			);
 			path = L1_AndrewVeselov_Snake;
 			sourceTree = "<group>";
@@ -239,10 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49FA7382226083F7004840CF /* Main.storyboard in Resources */,
-				49FA7379226083F7004840CF /* GameScene.sks in Resources */,
 				49FA7384226083F8004840CF /* Assets.xcassets in Resources */,
 				49FA7387226083F8004840CF /* LaunchScreen.storyboard in Resources */,
-				49FA737B226083F7004840CF /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FA73AF22608FC6004840CF /* SnakeHead.swift in Sources */,
+				49FA73AB226089B5004840CF /* Apple.swift in Sources */,
 				49FA737D226083F7004840CF /* GameScene.swift in Sources */,
 				49FA737F226083F7004840CF /* GameViewController.swift in Sources */,
+				49FA73AD22608FA2004840CF /* SnakeBodyPart.swift in Sources */,
+				49FA73B122608FED004840CF /* Snake.swift in Sources */,
 				49FA7377226083F7004840CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
